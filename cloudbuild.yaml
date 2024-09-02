@@ -62,3 +62,6 @@ steps:
       'push',
       'us-east1-docker.pkg.dev/sleep-434401/notifications/production'
     ]
+
+options:
+  logging: CLOUD_LOGGING_ONLY
