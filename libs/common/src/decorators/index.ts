@@ -1,1 +1,2 @@
-export * from './current-user.declarator';
+export * from './current-user.decorator';
+export * from './roles.decorator';
