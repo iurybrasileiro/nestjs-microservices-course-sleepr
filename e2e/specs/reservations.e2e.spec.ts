@@ -30,7 +30,7 @@ describe('Reservations', () => {
     const createdReservation = await createReservation();
 
     const responseGet = await fetch(
-      `http://reservations:3000/reservations/${createdReservation._id}`,
+      `http://reservations:3000/reservations/${createdReservation.id}`,
       {
         method: 'GET',
         headers: {
