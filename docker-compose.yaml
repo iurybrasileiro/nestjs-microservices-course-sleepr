@@ -48,6 +48,18 @@ services:
       - ./apps/notifications/.env
     volumes:
       - .:/usr/src/app
+  gateway:
+    build:
+      context: .
+      dockerfile: ./apps/gateway/Dockerfile
+      target: development
+    command: yarn start:debug gateway
+    env_file:
+      - ./apps/gateway/.env
+    ports:
+      - '3004:3004'
+    volumes:
+      - .:/usr/src/app
   mysql:
     image: mysql
     env_file:
