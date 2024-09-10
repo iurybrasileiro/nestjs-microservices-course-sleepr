@@ -3,5 +3,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "dependencies": {}
+  "scripts": {
+    "migrate": "dotenv -e .env.local -- pnpm prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1",
+    "prisma": "^5.19.1"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^7.4.2"
+  }
 }

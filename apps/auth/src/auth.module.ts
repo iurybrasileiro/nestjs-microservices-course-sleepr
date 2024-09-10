@@ -16,7 +16,7 @@ import { JwtStrategy } from './strategies/jwt-auth.strategy';
     ConfigModule.forRoot({
       isGlobal: true,
       validationSchema: Joi.object({
-        MONGODB_URI: Joi.string().required(),
+        DATABASE_URL: Joi.string().required(),
         JWT_SECRET: Joi.string().required(),
         JWT_EXPIRATION: Joi.string().required(),
         TCP_PORT: Joi.number().required(),
